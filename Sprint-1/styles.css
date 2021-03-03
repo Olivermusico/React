@@ -91,12 +91,21 @@
         background: #8f4f4f;
         width: 100%;
     }
+    /* tauleta portrait */
     
     @media (min-width: 768px) and (max-width: 1024px) {
         .section {
             flex-direction: column;
         }
     }
+    /* tauleta landscape */
+    
+    @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+        .section {
+            flex-direction: column;
+        }
+    }
+    /* mobile portrait */
     
     @media (min-width: 320px) and (max-width: 480px) {
         .articulos {
