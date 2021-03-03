@@ -97,6 +97,7 @@
     @media (min-width: 768px) and (max-width: 1024px) {
         .section {
             flex-direction: column;
+            background: lawngreen;
         }
     }
     /* tauleta landscape */
@@ -104,11 +105,17 @@
     @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
         .section {
             flex-direction: column;
+            background: lawngreen;
         }
     }
     /* mobile portrait */
     
     @media (min-width: 320px) and (max-width: 480px) {
+        .menu {
+            background: lightblue;
+            display: flex;
+            flex-flow: column;
+        }
         .section {
             display: flex;
             flex-direction: column;
