@@ -56,8 +56,8 @@
     
     .articulos {
         background: #ffbe0f;
-        flex: 2 1 auto;
         display: flex;
+        flex: 2 1 auto;
         flex-flow: row wrap;
     }
     
@@ -72,13 +72,14 @@
     }
     
     .aside {
+        display: flex;
         background: #f73f52;
+        flex-flow: column;
         flex: 1 1 auto;
     }
     
     .publicida {
         background: #ffea85;
-        display: flex;
     }
     
     .footer {
@@ -108,12 +109,12 @@
     /* mobile portrait */
     
     @media (min-width: 320px) and (max-width: 480px) {
-        .articulos {
+        .section {
             display: flex;
             flex-direction: column;
         }
-        .publicida {
+        .articulos {
+            display: flex;
             flex-direction: column;
-            width: 350px;
         }
     }
