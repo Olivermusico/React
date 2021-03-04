@@ -61,7 +61,7 @@
     }
     
     li a:hover {
-        background-color: rgb(230, 107, 107);
+        background-color: tomato;
     }
     
     .nav {
@@ -89,6 +89,7 @@
     h3 {
         color: white;
         background: tomato;
+        font-weight: bold;
     }
     
     h4 {
@@ -102,7 +103,7 @@
     }
     
     .articulos {
-        background: #ffbe0f;
+        background: gray;
         display: flex;
         flex: 2 1 auto;
         flex-flow: row wrap;
@@ -111,6 +112,7 @@
     .article {
         background: gainsboro;
         flex: 1 1 40%;
+        font-family: 'Lato', sans-serif;
     }
     
     .navegacion {
