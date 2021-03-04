@@ -86,6 +86,16 @@
         color: brown;
     }
     
+    h3 {
+        color: white;
+        background: tomato;
+    }
+    
+    h4 {
+        color: whitesmoke;
+        background: transparent;
+    }
+    
     .section {
         background: #000;
         display: flex;
@@ -99,7 +109,7 @@
     }
     
     .article {
-        background: #fa1e0e;
+        background: gainsboro;
         flex: 1 1 40%;
     }
     
