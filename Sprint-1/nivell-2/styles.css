@@ -1,217 +1,222 @@
-    * {
-        margin: 10px;
-        padding: 10px;
-        box-sizing: border-box;
-    }
-    
-    .madre {
-        display: flex;
-        flex-flow: column nowrap;
-    }
-    
-    .header {
-        background-image: url("img/Activitat\ Flex\ -\ Nivell\ 2\ -\ fons\ capçalera.jpg");
-        background-position: center;
-        background-size: 100%;
-        display: flex;
-        flex-flow: column nowrap;
-    }
-    
-    .img {
-        width: 50%;
-    }
-    
-    .menu {
-        display: flex;
-        flex-flow: row nowrap;
-        height: auto;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .logo {
-        flex: 0.1 1 auto;
-        height: auto;
-        width: auto;
-        justify-self: flex-start;
-    }
-    
-    .img {
-        display: block;
-        margin: auto;
-        height: 100px;
-        width: 100px;
-    }
-    
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
-    
-    li {
-        display: inline;
-    }
-    
-    li a {
-        color: rgb(32, 25, 25);
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
-    
-    li a:hover {
-        background-color: tomato;
-    }
-    
-    .nav {
-        color: brown;
-        flex: 5 1 auto;
-        height: 30px;
-    }
-    
-    .social {
-        background: #8f4f4f;
-        flex: 1 1 auto;
-        height: 30px;
-    }
-    
-    .texto-principal {
-        background-color: gainsboro;
-        opacity: 0.5;
-    }
-    
-    h1 {
-        text-align: center;
-        color: brown;
-    }
-    
-    h3 {
-        color: white;
-        background: tomato;
-        font-weight: bold;
-    }
-    
-    h4 {
-        color: whitesmoke;
-        background: transparent;
-    }
-    
-    .section {
-        background: #000;
-        display: flex;
-    }
-    
-    .articulos {
-        background: gray;
-        display: flex;
-        flex: 2 1 auto;
-        flex-flow: row wrap;
-    }
-    
-    .article {
-        background: gainsboro;
-        flex: 1 1 40%;
-        font-family: 'Lato', sans-serif;
-    }
-    
-    .navegacion {
-        background: #bd2000;
-        flex: 1 1 100%;
-    }
-    
-    .aside {
-        display: flex;
-        background: #f73f52;
-        flex-flow: column;
-        flex: 1 1 auto;
-    }
-    
-    .publicida {
-        background: #ffea85;
-    }
-    
-    .footer {
-        background: #000;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .pie {
-        background: #8f4f4f;
-        width: 100%;
-    }
-    /* tauleta portrait */
-    
-    @media (min-width: 481px) and (max-width: 1024px) {
-        .section {
-            flex-direction: column;
-            background: lawngreen;
+        * {
+            margin: 10px;
+            padding: 10px;
+            box-sizing: border-box;
         }
-        ul {
-            flex-flow: column wrap;
-        }
-    }
-    /* tauleta landscape */
-    
-    @media (min-width: 481px) and (max-width: 1024px) and (orientation: landscape) {
-        .section {
-            flex-direction: column;
-            background: lawngreen;
-        }
-        ul {
-            flex-flow: column wrap;
-            height: auto;
-        }
-    }
-    /* mobile portrait */
-    
-    @media (min-width: 320px) and (max-width: 480px) {
-        .header {
-            background-image: url("img/Activitat\ Flex\ -\ Nivell\ 2\ -\ fons\ capçalera.jpg");
-            background-position: center;
-            background-size: 100vmax;
-            align-items: center;
-        }
-        .menu {
-            display: flex;
-            flex: 1 1 auto;
-            flex-flow: column wrap;
-            justify-content: center;
-        }
-        .logo {
-            margin: 0;
-        }
-        .img {
-            display: block;
-            margin: auto;
-        }
-        .nav {
-            flex: 1 1 auto;
-            flex-flow: column wrap;
-            width: 100%;
-            height: max-content;
-        }
-        ul {
-            text-align: center;
-        }
-        li a {
-            display: block;
-            color: gainsboro;
-            text-align: center;
-            text-decoration: none;
-        }
-        .social {
-            background: #8f4f4f;
-            flex: 1 1 auto;
-            width: 100%;
-        }
-        .section {
-            display: flex;
-            flex-direction: column;
-        }
-        .articulos {
+        
+        .madre {
             display: flex;
             flex-flow: column nowrap;
         }
-    }
+        
+        .header {
+            background-image: url("img/Activitat\ Flex\ -\ Nivell\ 2\ -\ fons\ capçalera.jpg");
+            background-position: center;
+            background-size: 100%;
+            display: flex;
+            flex-flow: column nowrap;
+        }
+        
+        .img {
+            width: 50%;
+        }
+        
+        .menu {
+            display: flex;
+            flex-flow: row nowrap;
+            height: auto;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .logo {
+            flex: 0.1 1 auto;
+            height: auto;
+            width: auto;
+            justify-self: flex-start;
+        }
+        
+        .img {
+            display: block;
+            margin: auto;
+            height: 100px;
+            width: 100px;
+        }
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            display: inline;
+        }
+        
+        li a {
+            color: rgb(32, 25, 25);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        li a:hover {
+            background-color: tomato;
+        }
+        
+        .nav {
+            color: brown;
+            flex: 5 1 auto;
+            height: 30px;
+        }
+        
+        .social {
+            background: #8f4f4f;
+            flex: 1 1 auto;
+            height: 30px;
+        }
+        
+        .texto-principal {
+            background-color: gainsboro;
+            opacity: 0.7;
+        }
+        
+        h1 {
+            text-align: center;
+            color: brown;
+        }
+        
+        h3 {
+            color: white;
+            background: tomato;
+            font-weight: bold;
+        }
+        
+        h4 {
+            color: whitesmoke;
+            background: transparent;
+        }
+        
+        .section {
+            background: rgb(216, 209, 209);
+            display: flex;
+        }
+        
+        .articulos {
+            background: rgb(220, 220, 220, 0.8);
+            display: flex;
+            flex: 1 1 auto;
+            flex-flow: row wrap;
+        }
+        
+        .article {
+            background: #dcdcdc;
+            flex: 1 1 40%;
+            font-family: 'Lato', sans-serif;
+        }
+        
+        .article-image {
+            max-width: 30vw;
+            flex: 1 1 auto;
+        }
+        
+        .navegacion {
+            background: #bd2000;
+            flex: 1 1 100%;
+        }
+        
+        .aside {
+            display: flex;
+            background: #f73f52;
+            flex-flow: column;
+            flex: 1 1 auto;
+        }
+        
+        .publicida {
+            background: #ffea85;
+        }
+        
+        .footer {
+            background: #000;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .pie {
+            background: #8f4f4f;
+            width: 100%;
+        }
+        /* tauleta portrait */
+        
+        @media (min-width: 481px) and (max-width: 1024px) {
+            .section {
+                flex-direction: column;
+                background: lawngreen;
+            }
+            ul {
+                flex-flow: column wrap;
+            }
+        }
+        /* tauleta landscape */
+        
+        @media (min-width: 481px) and (max-width: 1024px) and (orientation: landscape) {
+            .section {
+                flex-direction: column;
+                background: lawngreen;
+            }
+            ul {
+                flex-flow: column wrap;
+                height: auto;
+            }
+        }
+        /* mobile portrait */
+        
+        @media (min-width: 320px) and (max-width: 480px) {
+            .header {
+                background-image: url("img/Activitat\ Flex\ -\ Nivell\ 2\ -\ fons\ capçalera.jpg");
+                background-position: center;
+                background-size: 100vmax;
+                align-items: center;
+            }
+            .menu {
+                display: flex;
+                flex: 1 1 auto;
+                flex-flow: column wrap;
+                justify-content: center;
+            }
+            .logo {
+                margin: 0;
+            }
+            .img {
+                display: block;
+                margin: auto;
+            }
+            .nav {
+                flex: 1 1 auto;
+                flex-flow: column wrap;
+                width: 100%;
+                height: max-content;
+            }
+            ul {
+                text-align: center;
+            }
+            li a {
+                display: block;
+                color: gainsboro;
+                text-align: center;
+                text-decoration: none;
+            }
+            .social {
+                background: #8f4f4f;
+                flex: 1 1 auto;
+                width: 100%;
+            }
+            .section {
+                display: flex;
+                flex-direction: column;
+            }
+            .articulos {
+                display: flex;
+                flex-flow: column nowrap;
+            }
+        }
