@@ -97,7 +97,7 @@
             background: transparent;
         }
         
-        .section {
+        section {
             background: rgb(216, 209, 209);
             display: flex;
         }
@@ -107,27 +107,32 @@
             display: flex;
             flex: 1 1 auto;
             flex-flow: row wrap;
+            margin: 0;
+            padding: 0;
+            position: relative;
         }
         
         .article {
-            background: #dcdcdc;
+            background: rgb(220, 220, 220);
             flex: 1 1 40%;
             font-family: 'Lato', sans-serif;
+            text-align: justify;
         }
         
         .article-image {
-            max-width: 30vw;
+            display: block;
+            width: 100%;
+            height: auto;
+            padding: 0;
             flex: 1 1 auto;
-        }
-        
-        .navegacion {
-            background: #bd2000;
-            flex: 1 1 100%;
+            margin-left: auto;
+            margin-right: auto;
+            border: aqua;
         }
         
         .aside {
             display: flex;
-            background: #f73f52;
+            background: rgb(220, 220, 220);
             flex-flow: column;
             flex: 1 1 auto;
         }
