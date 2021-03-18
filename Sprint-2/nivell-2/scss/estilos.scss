@@ -1,0 +1,13 @@
+$primary:#FF4500;
+$secondary:#FF8300;
+$success:#DF362D;
+$danger:#B7AC44;
+$warning: #5CD85A;
+$info:#F1C0B9;
+$light:#B2D2A4;
+$dark: #104210;
+$muted: lightgray;
+$white: #fff;
+$gray-900: #212529;
+$gray-700: #495057;
+$colors: ( "naranjo": $primary, "naranjo-claro": $secondary, "rojo": $success, "verdeclaro": $danger, "verdefuerte": $warning, "rosa": $info, "verdemuyclaro": $light, "verdeoscuro": $dark, "grisclaro": $muted, "blanco": $white, "gray": $gray-700, "gray-dark": $gray-900) !default;

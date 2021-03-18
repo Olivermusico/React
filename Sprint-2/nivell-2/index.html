@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="icon" href="img/favicon.ico">
+    <title>Jardines Humanos Colectivo</title>
+    <!--     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+ -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!--css style-->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- css color compilado con sass -->
+    <link rel="stylesheet" href="css/estilos.css">
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!--icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <!--***********COMIENZO DEL CONTENIDO***************-->
+
+    <header>
+        <div class="topbar">
+            <!-- Button trigger modal -->
+
+            <div class="btn-group float-right">
+                <button type="button" class="btn btn-light btn-sm" data-toggle="modal" data-target="#modalEntrar">Entrar</button>
+                <button type="button" class="btn btn-light btn-sm" data-toggle="modal" data-target="#modalRegistrar">Registrar-se</button>
+
+            </div>
+
+        </div>
+
+        <!-- Modal entrar -->
+        <div class="modal fade" id="modalEntrar">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- modal header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Entrar</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- modal body -->
+                    <div class="modal-body">
+                        <form action="/action_page.php">
+                            <div class="form-group">
+                                <label for="email">Correu electrònic:</label>
+                                <input type="email" class="form-control" id="email" placeholder="correu@exemple.cat" name="email">
+
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Paraula de pas:</label>
+                                <input type="password" class="form-control" id="pwd" placeholder="paraula de pas" name="pswd">
+
+                            </div>
+
+
+
+                            <div class="form-group form-check">
+                                <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" name="remember"> Recorda'm
+                              </label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer"> <button type="submit" class="btn btn-success">Enviar</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tancar</button></div>
+                </div>
+            </div>
+        </div>
+        <!-- modal registrar-se -->
+        <div class="modal fade" id="modalRegistrar">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- modal header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Registrar-se</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- modal body -->
+                    <div class="modal-body">
+                        <form action="/action_page.php">
+                            <div class="form-group">
+                                <label for="email">Correu electrònic:</label>
+                                <input type="email" class="form-control" id="email" placeholder="correu@exemple.cat" name="email" requiered>
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Paraula de pas:</label>
+                                <input type="password" class="form-control" id="pwd" placeholder="paraula de pas" name="pswd" requiered>
+                            </div>
+                            <div class="form group">
+                                <label for="psw-repeat">Repetir paraula de pas:</label>
+                                <input type="password" id="rep-pwd" placeholder="paraula de pas" name="rep-pswd" class="form-control" requiered>
+                            </div>
+
+                            <div class="form-group form-check">
+                                <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" name="remember"> Recorda'm
+                              </label>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="modal-footer"> <button type="submit" class="btn btn-success">Enviar</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tancar</button></div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="img/JH_logo-drive-gordo-horiz.png" alt="logo-jardines-humanos" class="logo-brand"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="material-icons">menu</span>
+                    </button>
+                <div class="collapse navbar-collapse col-6" id="collapsibleNavId">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#historia">Història</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#integrants">Integrants</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Repertori</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Uneix-t'hi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contacte</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <div id="cos" class="container col-12">
+
+        <section id="slide-jh">
+            <div id="carouselHome" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselHome" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselHome" data-slide-to="1"></li>
+                    <li data-target="#carouselHome" data-slide-to="2"></li>
+                    <li data-target="#carouselHome" data-slide-to="3"></li>
+                    <li data-target="#carouselHome" data-slide-to="4"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <img class="img-slide" src="img/JH-escena.JPG" alt="Jardines Humanos Colectivo en Escena mirando a la cámara">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/JH-Mataro-escena.JPG" alt="Jardines humanos tocando en mataró" class="img-slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/JH-escena-playing.JPG" alt="Jardines Humanos Tocando en teatre de sarrià" class="img-slide">
+                    </div>
+                    <div class="carousel-item"><img src="img/JH-Assajant-rient.JPG" alt="Jardines humanos assajant rient" class="img-slide"></div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselHome" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselHome" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+
+        </section>
+        <div class="container col-12">
+            <section id="historia">
+                <div class="container-fluid ">
+                    <div class="container-center ">
+                        <h1>Jardines Humanos Colectivo</h1>
+                        <p style="background-color:rgba(240, 248, 255, 0.479);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt minima nulla veniam maiores, deserunt laborum nostrum placeat itaque! Quidem vero laudantium amet impedit exercitationem ex ducimus quisquam esse recusandae sed?
+                            Nihil esse vel magni corporis quibusdam possimus quaerat quasi, magnam, voluptatem dolorum quia sit laudantium aspernatur commodi? Culpa inventore temporibus natus odio. Ipsum necessitatibus eum expedita molestiae nihil molestias
+                            odit. Accusantium veniam temporibus accusamus delectus! Voluptate fuga, et expedita sapiente alias iusto quia ex atque laborum quasi ipsam inventore ipsa libero iste illum eum a aliquid eaque itaque mollitia quidem! Voluptatem
+                            inventore explicabo assumenda ullam aut modi dolore deserunt ut, debitis repudiandae quidem amet aliquid praesentium beatae! Accusamus sed velit optio error pariatur quae architecto mollitia ex, possimus, maiores consectetur!</p>
+                        <blockquote class="jumbotron blockquote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo tempore cupiditate eius asperiores assumenda minus inventore. Illum nulla praesentium voluptatibus porro dignissimos reprehenderit corporis ab perferendis, accusantium
+                            libero excepturi officiis.
+                            <footer class="blockquote-footer">Luis Advis Vitaglich</footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <section class="container-fluid" id="integrants">
+        <h1>INTEGRANTS</h1>
+        <div class="card-deck">
+            <div class="card">
+                <img class="card-img-top" src="img/cards/oli.jpg" data-src="holder.js/100x180/" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">Óliver</h4>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias dignissimos minima vitae magni, sed et quisquam cupiditate soluta porro explicabo. Labore itaque explicabo vitae sed quidem quia ipsam omnis error?</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="img/cards/tere.jpg" data-src="holder.js/100x180/" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">Teresa</h4>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore assumenda iusto quis aliquid, laborum pariatur amet dolorem, ducimus temporibus quo id nam, accusantium quas reprehenderit et natus optio? Reprehenderit, beatae.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="img/cards/io.jpg" data-src="holder.js/100x180/" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">Ïo</h4>
+                    <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae saepe optio itaque! Dolore ullam dicta illum esse, soluta ducimus perspiciatis, iste voluptas iure velit optio, dolor voluptatem. Porro, ex eveniet.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img class="card-img-top" src="img/cards/nacho.jpg" data-src="holder.js/100x180/" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title">Nacho</h4>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nisi a assumenda illum, explicabo distinctio sint, iste voluptatem natus iusto non. Quasi nihil iure temporibus. Voluptates modi in tempora pariatur?</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--***********FIN DEL CONTENIDO***************-->
+    <!-- 
+    <script src="js/jquery-3.5.1.slim.min.js "></script>
+    <script src="js/popper.min.js "></script>
+    <script src="js/bootstrap.min.js "></script> -->
+
+</body>
+
+</html>
