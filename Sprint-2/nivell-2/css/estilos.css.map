@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"estilos.css"}
+{"version":3,"sourceRoot":"","sources":["../scss/estilos.scss"],"names":[],"mappings":"AAaA;EACI,kBAdK;;;AAiBT;EACI,OAXG;EAYH;;;AAGJ;EACI,OArBK;EAsBL,kBAbO;;;AAgBX;EACI,OArBG;;;AAwBP;EACI,kBA3BE","file":"estilos.css"}

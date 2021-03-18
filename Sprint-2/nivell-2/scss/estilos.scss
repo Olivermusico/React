@@ -11,3 +11,24 @@ $white: #fff;
 $gray-900: #212529;
 $gray-700: #495057;
 $colors: ( "naranjo": $primary, "naranjo-claro": $secondary, "rojo": $success, "verdeclaro": $danger, "verdefuerte": $warning, "rosa": $info, "verdemuyclaro": $light, "verdeoscuro": $dark, "grisclaro": $muted, "blanco": $white, "gray": $gray-700, "gray-dark": $gray-900) !default;
+body {
+    background-color: $primary;
+}
+
+h1 {
+    color: $dark;
+    font-weight: bolder;
+}
+
+.jumbotron {
+    color: $success;
+    background-color: $gray-700;
+}
+
+.nav-link {
+    color: $dark;
+}
+
+#nav {
+    background-color: $info;
+}

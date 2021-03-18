@@ -1,3 +1,23 @@
+body {
+  background-color: #FF4500;
+}
 
+h1 {
+  color: #104210;
+  font-weight: bolder;
+}
+
+.jumbotron {
+  color: #DF362D;
+  background-color: #495057;
+}
+
+.nav-link {
+  color: #104210;
+}
+
+#nav {
+  background-color: #F1C0B9;
+}
 
 /*# sourceMappingURL=estilos.css.map */
