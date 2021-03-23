@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SP3-N2</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h1 class="display-1">Sprint 3 Nivell 2</h1>
+        <h2 class="display-5 text-secondary">Óliver Carrasco</h2>
+        <p class="jumbotron">
+            Aprofita la funció "calculadora" de l'exercici anterior per crear una calculadora completa amb opcions per sumar, restar, multiplicar i dividir. Hauràs de controlar el Zero com a denominador d'una divisió, ja que si l'usuari divideix qualsevol número
+            entre 0 donarà error (p.e. 3/0), has de garantir que no falli!
+        </p>
+    </div>
+    <div class="container">
+        <div class="form-group container col-5">
+            <label for="num1">Número 1</label>
+            <input type="number" class="form-control" name="num1" id="num1" aria-describedby="helpId" placeholder="Escriu un número">
+            <small id="helpId" class="form-text text-muted">O tria el número amb les fletxes</small>
+            <label for="num2">Número 2</label>
+            <input type="number" class="form-control" name="num2" id="num2" aria-describedby="helpId" placeholder="Escriu un número">
+            <small id="helpId" class="form-text text-muted">O tria el número amb les fletxes</small>
+            <br>
+            <div class="form-check form-check-inline">
+                <label class="form-check-label m-1">
+                    <input class="form-check-input" type="radio" name="op" id="sum" value="+"> Suma
+                </label>
+                <label class="form-check-label m-1">
+                    <input class="form-check-input" type="radio" name="op" id="rest" value="-"> Resta
+                </label>
+                <label class="form-check-label m-1">
+                    <input class="form-check-input" type="radio" name="op" id="multi" value="*"> Multiplicació
+                </label>
+                <label class="form-check-label m-1">
+                    <input class="form-check-input" type="radio" name="op" id="div" value="/"> Divisió
+                </label>
+
+            </div>
+            <button type="button" onclick="calcular()" class="btn btn-primary">Calcular</button>
+            <p id="resultat"></p>
+        </div>
+        <script>
+            function calcular() {
+                let num1 = parseInt(document.getElementById("num1").value);
+                let num2 = parseInt(document.getElementById("num2").value);
+                let op = radioValue()
+                let resultat = calculadora(op, num1, num2);
+                document.getElementById("resultat").innerHTML = "El resultat és " + resultat;
+
+                function radioValue() {
+                    let op = document.getElementsByName("op");
+                    for (i = 0; i < op.length; i++) {
+                        if (op[i].checked) {
+                            return op[i].value;
+                        }
+
+                    }
+                }
+
+                function calculadora(op, num1, num2) {
+                    let resultat = 0;
+                    if (op == "+") {
+                        resultat = num1 + num2;
+
+                    } else if (op == "-") {
+                        resultat = num1 - num2;
+                    } else if (op == "*") {
+                        resultat = num1 * num2;
+                    } else if (op == "/") {
+                        if (num2 == 0) {
+                            alert("Dividir per zero no ens protarà enlloc, tria un altre número");
+                            return "indefinit";
+                        } else {
+                            resultat = num1 / num2;
+
+                        }
+
+                    } else {
+                        alert("alguna cosa no has fet bé");
+                    }
+                    return resultat;
+
+                }
+            }
+        </script>
+    </div>
+
+</body>
+
+</html>
