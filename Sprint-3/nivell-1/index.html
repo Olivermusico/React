@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 
 <head>
     <meta charset="UTF-8">
@@ -128,7 +128,31 @@
         }
 
         /* exercici 8 */
-        function ex8() {}
+        function ex8() {
+
+            let userNum1 = parseInt(prompt("dona'm un número"));
+            let userNum2 = parseInt(prompt("dona'm un altre"));
+            let operacio = prompt("quina operació vols fer? suma(+), resta(-), multiplicació(*). Escriu el símbol corresponent.");
+            let resultat = calculadora(operacio, userNum1, userNum2);
+            alert("el resultat és " + resultat + ".")
+
+
+            function calculadora(op, num1, num2) {
+                let resultat = 0;
+                if (op == "+") {
+                    resultat = num1 + num2;
+
+                } else if (op == "-") {
+                    resultat = num1 - num2;
+                } else if (op == "*") {
+                    resultat = num1 * num2;
+                } else {
+                    alert("alguna cosa no has fet bé");
+                }
+                return resultat;
+
+            }
+        }
     </script>
 </body>
 
