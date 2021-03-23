@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <h1 class="display-1">Sprint 3 Nivell 1</h1>
+    <h2 class="display-5 text-secondary">Óliver Carrasco</h2>
+    <div class="container-fluid row">
+        <div class="container my-3 p-3  border bg-dark text-white col-3">
+            <h2 class="display-4">Exercici 1</h2>
+            <p class="lead">
+                L'exercici consisteix a crear un fitxer anomenat index.html i mostrar per consola un 'Hola mundo' (per activar la consola ->; F12). Pista: Console.log()
+            </p>
+            <a name="ex1" id="ex1" class="btn btn-primary" onclick="ex1()" role="button">Excercici 1</a>
+        </div>
+        <div class="container my-3 p-3  border bg-dark text-white col-3">
+            <h2 class="display-4">Exercici 2</h2>
+            <p class="lead">Crea un alert que mostri el teu nom:</p>
+            <a name="ex2" id="ex2" class="btn btn-primary" onclick="ex2()" role="button">Exercici 2</a>
+        </div>
+
+        <div class="container my-3 p-3  border bg-dark text-white col-3">
+            <h2 class="display-4">Exercici 3</h2>
+            <p class="lead">Crea una variable que contingui el teu nom i un altre que contingui el teu cognom.
+                <b>(Se muestra por consola)</b>
+            </p>
+            <a name="ex3" id="ex3" class="btn btn-primary" onclick="ex3()" role="button">Exercici 3</a>
+        </div>
+
+        <div class="container my-3 p-3  border bg-dark text-white col-3">
+            <h2 class="display-4">Exercici 4</h2>
+            <p class="lead">Crea dos variables amb dos números i fes una suma entre ells. <b>(Se muestra por consola)</b></p>
+            <a name="ex4" id="ex4" class="btn btn-primary" onclick="ex4()" role="button">Exercici 4</a>
+        </div>
+
+        <div class="container my-3  p-3  border bg-dark text-white col-3">
+
+            <h2 class="display-4">Exercici 5</h2>
+            <p class="lead">Crea una variable nota_examen juntament amb un alert que ens digui si l’examen ha estat aprovat o no juntament amb la nota. (caldrà utilitzar un condicional IF)</p>
+            <a name="ex5" id="ex5" class="btn btn-primary" onclick="ex5()" role="button">Exercici 5</a>
+        </div>
+
+        <div class="container my-3  p-3  border bg-dark text-white col-3">
+            <h2 class="display-4">Exercici 6</h2>
+            <p class="lead">Reemplaça la paraula blau per la paraula verd del següent text Tinc un cotxe de color blau. Després intenta fer-ho remplaçant les o per les u. <b>(Se muestra por consola)</b></p>
+            <a name="ex6" id="ex6" class="btn btn-primary" onclick="ex6()" role="button">Exercici 6</a>
+        </div>
+
+        <div class="container my-3 p-3  border bg-dark text-white col-3">
+            <h2 class="display-4">Exercici 7</h2>
+            <p class="lead">Donat el seguit llistat d'objectes 'taula', 'cadira', 'ordinador', 'libreta', per un bucle que mostri per pantalla cada objecte i la seva posició al llistat.</p>
+            <a name="ex7" id="ex7" onclick="ex7()" role="button" class="btn btn-primary">Excercici 7</a><br> Resultat:
+            <p id="resultat"></p>
+        </div>
+        <div class="container my-3 p-3  border bg-dark text-white col-3">
+            <h2 class="display-4">Exercici 8</h2>
+            <p class="lead">Crea una funció anomenada calculadora que tingui com a entrada els següents paràmetres: operador, valor1 i valor2. Estructura de la funció que faci sumes, restes i multiplicacions. El resultat haurà de ser mostrar per pantalla.<br><br> function
+                calculadora( __, __, __) <br>{ ……... <br>} <br>var resultat = calculadora('resta',40,20);
+            </p>
+            <a name="ex8" id="ex8" onclick="ex8()" role="button" class="btn btn-primary">Excercici 8</a>
+        </div>
+    </div>
+    <!-- script -->
+    <script>
+        /* exercici 1 */
+        function ex1() {
+            console.log("Hola mundo!");
+        }
+        /* exercici 2 */
+        function ex2() {
+            alert("My name is Oliver");
+        }
+        /* exercici 3 */
+        function ex3() {
+            let nom = "Oliver";
+            let cognom = "Carrasco";
+            console.log(nom + " " + cognom);
+        }
+
+        /* excercici 4 */
+        function ex4() {
+            let numA = 34;
+            let numB = 56;
+            let suma = numA + numB;
+            console.log("La suma entre " + numA + " i " + numB + " és " + suma);
+        }
+        /* exercici 5 */
+        function ex5() {
+            let nota_examen;
+            nota_examen = prompt("Entra la teva nota");
+            if (nota_examen < 5) {
+                alert("Oh! Has suspés l'examen amb un " + nota_examen);
+            } else {
+                alert("Molt bé! Has aprovat l'exament amb un " + nota_examen);
+            }
+        }
+        /* exercici 6 */
+        function ex6() {
+            let text1 = "Tinc un cotxe de color verd";
+            console.log(text1);
+            let textNou = text1.replace("verd", "blau");
+            console.log(textNou);
+            let textNuu = textNou.replace(/o/g, "u");
+
+            console.log(textNuu);
+        }
+        /* exercici 7 */
+        function ex7() {
+            let array1 = ['taula', 'cadira', 'ordinador', 'llibreta']
+            let text = []
+            for (let i = 0; i < array1.length; i++) {
+                console.log("L'objecte " + array1[i] + " està a la posició " + i + ".");
+                text.push("L'objecte " + array1[i] + " està a la posició " + i + "." + "<br>");
+
+                document.getElementById("resultat").innerHTML = text.join(" ");
+            }
+
+        }
+
+        /* exercici 8 */
+        function ex8() {}
+    </script>
+</body>
+
+</html>
