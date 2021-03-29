@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SP3-N3</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h1 class="display-1">Sprint 3 Nivell 3</h1>
+        <h2 class="display-5 text-secondary">Óliver Carrasco</h2>
+
+        <p class="jumbotron">
+            Ara evolucionarem el nivell 2: Crearem una interfície gràfica per tal de fer la calculadora més usable. El disseny és totalment lliure, intenta sorprendre al teu mentor.
+        </p>
+
+    </div>
+
+
+    <div class="container mx-auto p-3 bg-warning rounded-lg">
+        <h1 class="calc-h1 display-1 bg-warning p-3 col-12">Calculator!</h1>
+        <div class="container">
+            <h5 style="text-align: center;">Escriu un número a cada caixa i tria una operació!</h5>
+        </div>
+        <div id="cos-calc" class="row mx-auto col">
+            <div id="caixes-nums" class="container">
+
+                <div class="col pt-3"> <input type="text" name="box" id="num1" class="col" placeholder="num1"></div>
+                <div class="col pt-3"><input type="text" name="box" id="num2" class="col" placeholder="num2"></div>
+            </div>
+
+            <div class="row mx-auto p-3 justify-content-center">
+                <div class="col-5">
+                    <button type="button" class="btn-lg rounded col btn-danger" onclick="suma()" name="op" value="+">+</button>
+                </div>
+                <div class="col-5">
+                    <button type="button" class="btn-lg rounded col btn-danger" onclick="resta()" name="op" value="-">-</button>
+                </div>
+                <div class="col-5">
+                    <button type="button" class="btn-lg rounded col btn-danger" onclick="multi()" name="op" value="*">x</button>
+                </div>
+                <div class="col-5">
+                    <button type="button" class="btn-lg rounded col btn-danger" onclick="div()" name="op" value="/">/</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="container calc-h1">Resultat:
+            <p class="jumbotron " style="text-align: center;" id="resultat"></p>
+        </div>
+
+    </div>
+
+
+
+    <script src="scripts.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+ #caixes-nums {
+     width: 200px;
+ }
+ 
+ #cos-calc {
+     width: 600px;
+ }
+ 
+ .calc-h1 {
+     font-family: 'Fredoka One', cursive;
+     text-align: center;
+ }
+ 
+ @media (max-width: 575.98px) {
+     .calc-h1 {
+         font-size: 2.5rem;
+     }
+ }
+ 
+ @media (min-width: 576px) {
+     .calc-h1 {
+         font-size: 3rem;
+     }
+ }
+ 
+ @media (min-width: 768px) {
+     .calc-h1 {
+         font-size: 5rem;
+     }
+ }
+ 
+ @media (min-width: 992px) {
+     .calc-h1 {
+         font-size: 6rem;
+     }
+ }
+ 
+ @media (min-width: 1200px) {}
