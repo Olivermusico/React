@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SP3-N3</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../2/styles.css">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h1 class="display-1">Sprint 3 Lletres</h1>
+        <h2 class="display-2">Nivell 1</h2>
+        <h2 class="display-5 text-secondary">Óliver Carrasco</h2>
+
+        <p class="jumbotron">
+            L’exercici consisteix en mostrar per <b>consola</b> quantes vegades apareix cada lletra del teu nom i cognoms amb diferents variants (fases).
+        </p>
+
+    </div>
+
+    <div class="container-fluid">
+        <div class="card-deck">
+            <!-- <div class="row justify-content-center"> -->
+            <div class="card bg-dark text-white">
+                <div class="card-header">
+                    <h1 class="card-title">Exercici 1</h1>
+                </div>
+                <div class="card-body">
+                    <ul class="list card-text">
+                        <li>Crea un array amb el teu nom on cada posició correspongui a una lletra.</li>
+                        <li>Fes un bucle que recorri aquest array i mostri per consola cadascuna de les lletres.</li><br>
+                    </ul>
+                </div>
+                <div class="card-footer"><button type="button" class="btn btn-info" onclick="ex1()">Clica!</button></div>
+            </div>
+            <div class="card bg-secondary text-white">
+                <div class="card-header">
+                    <h1 class="card-title">Exercici 2</h1>
+                </div>
+                <div class="card-body">
+                    <ul class="list card-text">
+                        <li>Al bucle, si la lletra és una vocal imprimeix a la consola: ‘He trobat la VOCAL: __’. Sinó, imprimeix: ‘He trobat la CONSONANT: __’.</li>
+                        <li>Si trobes un número, mostra per pantalla: ‘Els noms de persones no contenen el número: __’</li><br>
+                    </ul>
+                </div>
+                <div class="card-footer"><button type="button" class="btn btn-info" onclick="ex2()">Clica!</button></div>
+            </div>
+            <div class="card bg-dark text-white">
+                <div class="card-header">
+                    <h1 class="card-title">Exercici 3</h1>
+                </div>
+                <div class="card-body">
+                    <ul class="list card-text">
+                        <li>Emmagatzemar en un Map les lletres de l'array y el nombre de vegades que apareixen.</li><br>
+                    </ul>
+                </div>
+                <div class="card-footer"><button type="button" class="btn btn-info" onclick="ex3()">Clica!</button></div>
+            </div>
+            <div class="card bg-secondary text-white">
+                <div class="card-header">
+                    <h1 class="card-title">Exercici 4</h1>
+                </div>
+                <div class="card-body">
+                    <ul class="list card-text">
+                        <li>
+                            Crea una altra array amb el teu cognom on cada posició correspongui a una lletra.
+
+                        </li>
+                        <li>Fusiona els dos arrays en un. A més, afegeix una posició amb un espai buit entre la primera i la segona. És a dir, partim de 'array name i surname i al acabar l’execució només tindrem una que es dirà fullName.</li><br>
+
+                    </ul>
+                </div>
+                <div class="card-footer"> <button type="button" class="btn btn-info" onclick="ex4()">Clica!</button></div>
+            </div>
+
+        </div>
+        <!--Nivell 2 -->
+    </div>
+    <div class="container-fluid">
+
+        <h2 class="display-2">Nivell 2</h2>
+
+        <div class="jumbotron">
+            Crea una funció que retorni un array amb tots els email (sense repetir) del següent text: <br>
+
+            <code>
+                var str = 'Una dirección de correo electrónico es la dirección que utiliza para recibir y enviar correos electrónicos. Se muestra a los destinatarios de sus correos
+                electrónicos para que sepan quién le envió un correo electrónico. Cada dirección de correo electrónico sólo se puede asignar una vez en todo el mundo y, por lo
+                tanto, está disponible exclusivamente para usted. No puede cambiar las direcciones de correo electrónico, pero puede eliminarlas en cualquier momento. Una dirección
+                de es: La parte del dominio depende del dominio bajo el cual se crea la dirección de correo electrónico: en nuestro ejemplo es ionos.es. Esta información varía de
+                proveedor a proveedor, por lo que una parte del dominio también puede ser gmail.com o gmx.es si utiliza una dirección de correo electrónico de estos proveedores. Si
+                ha registrado su propio dominio, por ejemplo, www.el-nombre-de-sus-sueños.es, las direcciones de correo electrónico que configura para el dominio lo tienen como
+                parte del dominio (nombre-de-usuario@el-nombre-de-sus-sueños.es o nombre-de-usuario@el-nombre-de-sus-sueños.ES). El nombre de usuario es la parte de una dirección
+                de correo electrónico que puede seleccionar libremente en la medida de lo posible. Puede, por ejemplo, utilizar su propio nombre o el nombre o departamento de una
+                empresa. Si utiliza una dirección de correo electrónico con un proveedor de correo como gmail.com o gmx.es, es posible que la combinación con la parte del dominio
+                deseada ya esté registrada. En este caso, deberá considerar alternativas para el nombre de usuario de su dirección de correo electrónico. Si utiliza su propio
+                dominio, estas restricciones no se aplican porque sólo usted puede crear direcciones de correo electrónico que coincidan con su propio dominio. En resumen,
+                nombre-de-usuario@ionos.es es un email';
+
+            </code><br><br>
+            <button type="button" onclick="ex5()" class="btn btn-info">Clica!</button>
+        </div>
+
+    </div>
+    <div class="container-fluid">
+        <!-- Nivell 3 -->
+        <h2 class="display-2">Nivell 3</h2>
+
+        <p class="jumbotron">
+            Crea una interfície gràfica amb botons que executi cadascun dels 5 exercicis anteriors.
+        </p>
+
+    </div>
+    <div class="card-deck m-2">
+        <div class="card">
+            <div class="card-body">
+                <div class="jumbotron">
+                    <h1 class="display-3">Excercici 1</h1>
+                    <p class="lead">Escriu el teu nom i veuràs cadascuna de les lletres en una columna.</p>
+                    <input type="text" name="nom" id="nom1" placeholder="nom">
+                    <hr class="my-2">
+                    <p class="lead">
+                        <a class="btn btn-danger btn-lg" onclick="ex1n3()" role="button">Prova'm!</a>
+                    </p>
+                    <p id="ex1n3" class="lead">
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <div class="jumbotron">
+                    <h1 class="display-3">Excercici 2</h1>
+                    <p class="lead">Escriu el teu nom i veuràs cadascuna de les lletres en una columna. També seràs informat si és una vocal, una consonant o un número.</p>
+                    <input type="text" name="nom" id="nom2" placeholder="nom">
+                    <hr class="my-2">
+                    <p class="lead">
+                        <a class="btn btn-danger btn-lg" onclick="ex2n3()" role="button">Prova'm!</a>
+                    </p>
+                    <p id="ex2n3" class="lead">
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+
+            <div class="card-body">
+                <div class="jumbotron">
+                    <h1 class="display-3">Excercici 3</h1>
+                    <p class="lead">Escriu el teu nom i veuràs cadascuna de les lletres i quantes vegades apareixen.</p>
+                    <input type="text" name="nom" id="nom3" placeholder="nom">
+                    <hr class="my-2">
+                    <p class="lead">
+                        <a class="btn btn-danger btn-lg" onclick="ex3n3()" role="button">Prova'm!</a>
+                    </p>
+                    <p id="ex3n3" class="lead">
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+
+            <div class="card-body">
+                <div class="jumbotron">
+                    <h1 class="display-3">Excercici 4</h1>
+                    <p class="lead">Ara també et demanem el cognom! <br>Si cliques els veuràs en un Array un al costat de l'altre, separats per comes!</p>
+                    <input type="text" name="nom" id="nom4" placeholder="nom">
+                    <input type="text" name="cognom" id="cognom4" placeholder="cognom">
+                    <hr class="my-2">
+                    <p class="lead">
+                        <a class="btn btn-danger btn-lg" onclick="ex4n3()" role="button">Prova'm!</a>
+                    </p>
+                    <p id="ex4n3" class="lead">
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="card-deck m-2">
+        <div class="card">
+
+            <div class="card-body">
+                <div class="jumbotron">
+                    <h1 class="display-3">Excercici 5</h1>
+                    <p class="lead"> Crea una funció que retorni un array amb tots els email (sense repetir) del següent text:</p>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#modelId">
+                        Llegeix el text aquí!
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                        <div class="modal-dialog modal-xl" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Text de exemple</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container-fluid">
+                                        <code>
+                                            var str = 'Una dirección de correo electrónico es la dirección que utiliza para recibir y enviar correos electrónicos. Se muestra a los
+                                            destinatarios de sus correos
+                                            electrónicos para que sepan quién le envió un correo electrónico. Cada dirección de correo electrónico sólo se puede asignar una vez en
+                                            todo el mundo y, por lo
+                                            tanto, está disponible exclusivamente para usted. No puede cambiar las direcciones de correo electrónico, pero puede eliminarlas en
+                                            cualquier momento. Una dirección
+                                            de es: La parte del dominio depende del dominio bajo el cual se crea la dirección de correo electrónico: en nuestro ejemplo es ionos.es.
+                                            Esta información varía de
+                                            proveedor a proveedor, por lo que una parte del dominio también puede ser gmail.com o gmx.es si utiliza una dirección de correo
+                                            electrónico de estos proveedores. Si
+                                            ha registrado su propio dominio, por ejemplo, www.el-nombre-de-sus-sueños.es, las direcciones de correo electrónico que configura para
+                                            el dominio lo tienen como
+                                            parte del dominio (nombre-de-usuario@el-nombre-de-sus-sueños.es o nombre-de-usuario@el-nombre-de-sus-sueños.ES). El nombre de usuario es
+                                            la parte de una dirección
+                                            de correo electrónico que puede seleccionar libremente en la medida de lo posible. Puede, por ejemplo, utilizar su propio nombre o el
+                                            nombre o departamento de una
+                                            empresa. Si utiliza una dirección de correo electrónico con un proveedor de correo como gmail.com o gmx.es, es posible que la
+                                            combinación con la parte del dominio
+                                            deseada ya esté registrada. En este caso, deberá considerar alternativas para el nombre de usuario de su dirección de correo
+                                            electrónico. Si utiliza su propio
+                                            dominio, estas restricciones no se aplican porque sólo usted puede crear direcciones de correo electrónico que coincidan con su propio
+                                            dominio. En resumen,
+                                            nombre-de-usuario@ionos.es es un email';
+
+                                        </code>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tancar</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="my-2">
+                    <p class="lead">
+                        <a class="btn btn-danger btn-lg" onclick="ex5n3()" role="button">Prova'm!</a>
+                    </p>
+                    <p id="ex5n3" class="lead">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../2/nivell-1/scripts-1.js"></script>
+    <script src="../2/nivell-2/scripts-2.js"></script>
+    <script src="../2/nivell-3/scripts-3.js"></script>
+</body>
