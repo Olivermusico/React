@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S4. Validacions-nivell 1</title>
+
+    <!--     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+ -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+
+    <!-- scripts -->
+    <script src="validator.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container  text-center mb-5">
+        <h1 class="display-1">Sprint 4 Validacions</h1>
+        <h2 class="display-2">Nivell 1</h2>
+    </div>
+    <!--Formulari de cerca-->
+
+    <form id="search-form">
+        <div class="container">
+            <div class="active-lime mb-4">
+                <input class="form-control" type="text" placeholder="Buscar" aria-label="Search" name="search">
+            </div>
+        </div>
+    </form>
+    <!-- Formulari de login -->
+    <div class="container active-lime mb-5">
+
+        <form class="form-inline" action="#">
+            <label for="email2" class="mb-2 mr-sm-2">Correu electrònic:</label>
+            <input type="text" class="form-control mb-2 mr-sm-2" id="email2" placeholder="Escriure correu" name="email">
+            <label for="pwd2" class="mb-2 mr-sm-2">Paraula de pas:</label>
+            <input type="text" class="form-control mb-2 mr-sm-2" id="pwd2" placeholder="Escriure paraula de pas" name="pswd">
+            <div class="form-check mb-2 mr-sm-2">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" name="remember"> Recorda'm
+                </label>
+            </div>
+            <button type="submit" class="btn btn-success mb-2">Enviar</button>
+        </form>
+    </div>
+    <!-- Formulari de registre -->
+    <section>
+        <div class="container ">
+            <div class="row justify-content-center ">
+                <div class="col-12 col-md-8 col-lg-8 col-xl-6 ">
+                    <div class="row ">
+                        <div class="col text-center ">
+                            <h1>Registrar-se</h1>
+                        </div>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col mt-4 ">
+                            <input type="text " class="form-control " placeholder="Nom d'usuari">
+                        </div>
+                    </div>
+                    <div class="row align-items-center mt-4">
+                        <div class="col ">
+                            <input type="email" class="form-control" placeholder="Correu electrónic">
+                        </div>
+                    </div>
+                    <div class="row align-items-center mt-4 ">
+                        <div class="col ">
+                            <input type="password" class="form-control" placeholder="Paraula de pas">
+                        </div>
+                        <div class="col">
+                            <input type="password" class="form-control" placeholder="Confirma paraula de pas">
+                        </div>
+                    </div>
+                    <div class="row justify-content-start mt-4 ">
+                        <div class="col ">
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input">
+                                    Accepto les condicions <a href="#">Terms and Conditions</a>
+                                </label>
+                            </div>
+
+                            <button class="btn btn-success mt-4 ">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
