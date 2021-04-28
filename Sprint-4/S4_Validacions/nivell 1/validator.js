@@ -1,37 +1,18 @@
 /* Formulari de cerca */
-$('search-form').bootstrapValidator({
-    message: 'this value is not valid',
-    feedbackIcons: {
-
-        valid: 'glyphicon glyphicon-ok',
-
-        invalid: 'glyphicon glyphicon-remove',
-
-        validating: 'glyphicon glyphicon-refresh'
-
-    },
-    fields: {
-
-        search: {
-
-            validators: {
-
-                notEmpty: {
-
-                    message: 'Es necessita una paraula per realitzar la cerca'
-
-                },
-                stringLength: {
-
-                    min: 3,
-
-                    message: 'La paraula ha de tenir com a mínim 3 caracters'
-
+(function () {
+    'use strict';
+    window.addEventListener('load', function () {
+        // Get the forms we want to add validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function (form) {
+            form.addEventListener('submit', function (event) {
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
                 }
-
-
-            }
-
-        }
-    }
-});
+                form.classList.add('was-validated');
+            }, false);
+        });
+    }, false);
+})();

@@ -1,3 +1,7 @@
 .active-lime input[type=text] {
     border: 2px solid lime;
 }
+
+body {
+    margin: 10px;
+}
