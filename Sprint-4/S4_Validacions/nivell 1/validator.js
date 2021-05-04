@@ -21,30 +21,30 @@ function validateFormLogin() {
     inputPsw = document.getElementById("pwd1");
     validationEmail(mailPerValidar, inputMail);
     validationPswd(pwdPerValidar, inputPsw);
-
+    return false;
 }
 
 const validationEmail = (email, input) => {
-    if (mailPerValidar.indexOf('@') <= 0) {
-        inputMail.classList.add('is-invalid');
-        return false;
-    }
-    if ((mailPerValidar.charAt(mailPerValidar.length - 4) != '.') && (mailPerValidar.charAt(mailPerValidar.length - 3) != '.')) {
-        inputMail.classList.add('is-invalid');
-        return false;
-    } else {
-        inputMail.classList.add('is-valid');
-        inputMail.classList.remove('is-invalid')
-        return false;
-    }
-}
-const validationPswd = (pwd, input) => {
-    if (pwd.length < 6 || pwd == "") {
+    if (email.indexOf('@') <= 0) {
         input.classList.add('is-invalid');
-        return false;
+    }
+    if ((email.charAt(email.length - 4) != '.') && (email.charAt(email.length - 3) != '.')) {
+        input.classList.add('is-invalid');
     } else {
         input.classList.add('is-valid');
-        input.classList.remove('is-invalid');
-        return false;
+        input.classList.remove('is-invalid')
     }
+    return false;
+}
+const validationPswd = (pwd, input) => {
+    var upperCaseLetters = /[A-Z]/g;
+    var numbers = /[0-9]/g;
+    if (pwd.length >= 8 && pwd.match(upperCaseLetters) && pwd.match(numbers)) {
+        input.classList.add('is-valid');
+        input.classList.remove('is-invalid');
+    } else {
+        input.classList.remove('is-valid');
+        input.classList.add('is-invalid');
+    }
+    return false;
 }
