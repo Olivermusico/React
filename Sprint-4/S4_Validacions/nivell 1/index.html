@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S4. Validacions-nivell 1</title>
+
+    <!--     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+ -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container text-center mb-5">
+        <h1 class="display-1">Sprint 4 Validacions</h1>
+        <h2 class="display-2">Nivell 1</h2>
+    </div>
+
+    <!--Formulari de cerca-->
+
+    <section class="m-5">
+        <div class="container">
+            <h3 class="text-center">Formulari de cerca</h3>
+            <form class="m-2" name="search-form" id="search-form" onsubmit="return validateFormSearch()">
+                <label class="m-2" for="Buscar">Busca el que vulguis!</label>
+                <input id="Buscar" class="form-control col m-2" type="search" placeholder="Buscar" aria-label="Search" name="search" required>
+                <div class="invalid-feedback m-2">La teva cerca ha de contenir més de 3 caracters</div>
+                <input class="btn btn-success m-2" type="submit" value="Buscar">
+            </form>
+        </div>
+    </section>
+
+    <section>
+        <!-- Formulari de login -->
+        <h3 class="text-center">Formulari de login</h3>
+
+        <div class="container">
+
+            <form class="form" id="form-login" name="form-login" action="#" onsubmit="return validateFormLogin()">
+                <div class="form-group m-2">
+                    <label for="email1">Correu electrònic:</label>
+                    <input type="text" class="form-control" id="email1" placeholder="Escriure correu" name="email1">
+                    <small id="emailHelp" class="form-text text-muted">Mai compartirem el teu correu amb ningú!</small>
+                    <div class="invalid-feedback" id="errormsg">El correu electrònic no és correcte.</div>
+                </div>
+                <div class="form-group m-2">
+                    <label for="pwd1">Paraula de pas:</label>
+                    <input type="password" class="form-control" id="pwd1" placeholder="Escriure paraula de pas" name="pwd1">
+                    <div class="invalid-feedback" id="errorpsw">La paraula de pas ha de contenir com a mínim <b>8 caracters</b>, un <b>número</b> i <b>una majúscula</b>.</div>
+                </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="remember"> Recorda'm
+                    </label>
+                    <button type="submit" class="btn btn-success ml-2">Enviar</button>
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+    <!-- Formulari de registre -->
+    <h3 class="text-center">Formulari de registre</h3>
+
+    <section class="container">
+
+        <div class="text-uppercase text-center">
+            <h1>Registrar-se</h1>
+        </div>
+
+        <div class="row m-2">
+            <div class="container col-6">
+                <form class="was-validated">
+                    <div class="form-group">
+                        <label class="col-form-label" for="email">Correu electrónic</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Correu electrónic" required>
+                        <div class="valid-feedback">Vàlid.</div>
+                        <div class="invalid-feedback">Si us plau ompliu aquest camp</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label" for="pwd">Paraula de pas</label>
+                        <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Paraula de pas" required>
+                        <div class="valid-feedback">Vàlid.</div>
+                        <div class="invalid-feedback">Si us plau ompliu aquest camp</div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label" for="repeatpwd">Repetiu la paraula de pas</label>
+                        <input type="password" class="form-control" id="repeatpwd" name="repeatpwd" placeholder="Confirma paraula de pas" required>
+                        <div class="valid-feedback">Vàlid.</div>
+                        <div class="invalid-feedback">Si us plau ompliu aquest camp</div>
+                    </div>
+                    <div class="form-group form-check">
+
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" name="agree" required>
+                            <div class="valid-feedback">Vàlid</div>
+                            <div class="invalid-feedback">Si us plau accepta les condicions per continuar</div>
+                            Accepto les condicions <a href="#">Termes i Condicions</a>
+                        </label>
+
+                        <button type="submit" class="btn btn-success form-group">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- scripts -->
+    <script src="validator.js"></script>
+</body>
+
+</html>

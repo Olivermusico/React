@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprint 4 - ES6</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body class="m-5">
+    <div class="container">
+        <h1 class="display-1 text-center">Sprint 4</h1>
+        <h2 class="display-2 text-center">Nivell 1</h2>
+        <h3 class="display-3 text-center">Óliver Carrasco</h3>
+    </div>
+
+    <div class="container col border p-3 m-2">
+        <h3 class="display-4">Excercici 1</h3>
+
+        <p class="lead">Converteix a funcions fletxa:</p>
+
+        <div class="card-deck">
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-text"> <code>function multiply(num1, num2) { return num1 * num2; }</code>
+                    </p>
+                    <code class="text-success">const multply = (num1, num2) => { return num1 * num2; }
+                    </code>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-text"> <code>
+                            function toCelsius(fahrenheit) {
+                            return (5 / 9) * (fahrenheit - 32);
+                            }
+
+                        </code></p>
+                    <code class="text-success">const toCelsius = (fahrenheit) => {
+                        return (5 / 9) * (fahrenheit - 32);
+                        }</code>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-text">
+                        // This function returns a string padded with leading zeros <br><br> <code>
+                            function padZeros(num, totalLen) { <br>var numStr = num.toString(); <br>
+                            var numZeros = totalLen
+                            - numStr.length; <br>
+                            for (var i = 1; i<=numZeros; i++) { <br>
+                                numStr="0" + numStr; } return numStr;
+                                <br> } </code>
+                        <br><br>
+                        <code class="text-success">const padZeros = (num, totalLen) => { <br>
+                            var numStr = num.toString(); <br>
+                            var numZeros = totalLen - numStr.length; <br>
+                            for (var i = 1; i<=numZeros; i++) { <br>
+                                numStr="0" + numStr;
+                                <br>} <br>
+                                return numStr; <br>
+                                }</code>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-text"> <code>
+                            function power(base, exponent) { <br>
+                            var result = 1; <br>
+                            for (var i = 0; i < exponent; i++) { <br>
+                                result *=base; <br>
+                                } return result;
+                                <br>} </code> </p>
+                    <code class="text-success">const power = (base, exponent) => { <br>
+                        return Math.pow(base, exponent);
+                        <br>} </code>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <p class="card-text"> <code>
+                            function greet(who) { <br>
+                            console.log("Hello " + who); <br>
+                            }
+                        </code></p>
+                    <code class="text-success">const greet = (who) => { <br>
+                        console.log(`Hello ${who}`); <br>
+                        }</code>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container row col">
+        <div class="container col p-3 m-2  border">
+            <h3 class="display-4">Excercici 2</h3>
+
+
+            <p class="lead">Arregla l'error del següent bloc de codi: <br> <br>
+                <code>
+                    users.map(function (user) { <br>
+                    user.firstName; <br>
+                    }); <br>
+                    var users = [ <br>
+                    { firstName: 'Homer', lastName: 'Simpson' }, <br>
+                    { firstName: 'Marge', lastName: 'Simpson' },<br>
+                    { firstName: 'Bart', lastName: 'Simpson' }, <br>
+                    { firstName: 'Lisa', lastName: 'Simpson' },<br>
+                    { firstName: 'Maggie', lastName: 'Simpson' }]; <br>
+                </code></p>
+
+
+
+            <p class="lead">Solució:</p>
+
+
+            <code class="text-success">
+
+                var users = [ <br>
+                { firstName: 'Homer', lastName: 'Simpson' }, <br>
+                { firstName: 'Marge', lastName: 'Simpson' },<br>
+                { firstName: 'Bart', lastName: 'Simpson' }, <br>
+                { firstName: 'Lisa', lastName: 'Simpson' },<br>
+                { firstName: 'Maggie', lastName: 'Simpson' }]; <br>
+                <br>
+                var names = users.map(function(user) { <br>
+                return user.firstName; <br>
+                }); <br>
+            </code>
+        </div>
+        <div class="container col p-3 m-2 border">
+            <h3 class="display-4">Excercici 3</h3>
+            <p class="lead">Donat el següent array de strings, mostrar per consola la frase completa usant .reduce() <br><br>
+                <code>var epic = ['a', 'long', 'time', 'ago', 'in a', 'galaxy', 'far far',
+                    'away']; <br><br>
+                </code> Resultat per consola: 'a long time ago in a galaxy far far away' <br> Nota: no fa falta fer un "join".
+            </p>
+
+            <p class="lead">Solució:</p>
+            <code class="text-success">var epic = ['a', 'long', 'time', 'ago', 'in a', 'galaxy', 'far far', 'away']; <br>
+                const unir = (stringAnterior, stringActual) => stringAnterior + stringActual + " "; <br>
+
+                console.log(epic.reduce(unir));</code>
+        </div>
+        <div class="container col border p-3 m-2">
+            <h3 class="display-4">Exercici 4</h3>
+
+            <p class="lead">Crear una funció que accepti un string i retornada aquest string revertit. <br> Nota: Usar funció fletxa (arrow functions), l'operador de prograpación (spread operator) y el mètode <code>.reverse()</code></p>
+            <p class="lead">Solució:</p>
+            <code class="text-success">const reverse = (string) => { <br>
+                let copyString = [...string]; <br>
+                return copyString.reverse().join('').toString(); <br>
+                } <br>
+                let s1 = "React" <br>
+                let stringAlReves = reverse(s1); <br>
+
+                console.log(stringAlReves);</code>
+        </div>
+        <div class="container col border p-3 m-2">
+            <h3 class="display-4">Exercici 5</h3>
+
+            <p class="lead">Modifica la funció <code>'a()'</code> per a reemplaçar la promesa per async/await:</p> <br>
+            <p class="lead">
+                <code>function b() { <br>
+                    // tasques asíncrones , que triguen una estona..<br> } <br><br> function a() { <br>
+                    // Ens esperem que la funció b acabi<br>
+                    b().then() => { doMoreWork();
+                    <br> }
+                    <br>}</code>
+            </p>
+            <br>
+            <p class="lead">Solució:</p>
+            <code class="text-success">function b() { <br>
+                // tasques asíncrones , que triguen una estona..<br>
+                }<br>
+
+                async function a() {<br>
+                // Ens esperem que la funció b acabi i ens doni el resultat o l'error<br>
+                try {<br>
+                const result = await b();<br>
+                doMoreWork();<br>
+                } catch (error){<br>
+                console.log(error)<br>
+                }<br>
+
+                }<br>
+                a();</code><br>
+        </div>
+        <div class="container col border p-3 m-2">
+            <h3 class="display-4">Exercici 6</h3>
+            <p class="lead">Tenim un array de tasques i volem aconseguir un array que contingui únicament els noms de les tasques.
+                <ul class="list-group">
+                    <li class="list-group-item">Usar .forEach() per obtenir aquest array.</li>
+                    <li class="list-group-item">Usar .map() per obtenir aquest array.</li>
+                </ul>
+            </p>
+            <br>
+            <code>
+                var tasks = [ <br>
+                { <br>
+                'name' : 'Start React web', <br>
+                'duration' : 120 <br>
+                }, <br>
+                { <br>
+                'name' : 'Work out', <br>
+                'duration' : 60 <br>
+                }, <br>
+                { <br>
+                'name' : 'Procrastinate on facebook', <br>
+                'duration' : 240 <br>
+                } <br>
+                ]; <br>
+            </code><br>
+            <p class="lead">Solució:</p>
+            <code class="text-success">
+                let tasksNamesForEach = [];<br>
+                tasks.forEach(tareas => tasksNamesForEach.push(tareas.name));<br>
+                console.log(tasksNamesForEach);<br><br>
+
+                let tasksNamesMap = [];<br>
+                tasks.map(tareas => tasksNamesMap.push(tareas.name));<br>
+                console.log(tasksNamesMap);<br>
+            </code><br>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
